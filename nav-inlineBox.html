@@ -1,0 +1,196 @@
+<!doctype HTML>
+<html>
+
+<head>
+
+	<style>
+		body {
+
+			background-image: url(../smileMan.jpg);
+			background-color: #cccccc;
+			height: 1000px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+
+		}
+
+		#main-nav {
+			text-align: center;
+			background-color: darkgrey;
+			height: 50px;
+			width: 100%;
+			padding-left: 0px;
+			margin-left: 0px;
+			margin-top: 10px;
+
+		}
+
+		#main-nav a {
+			text-decoration: none;
+			color: black;
+			text-transform: uppercase;
+
+		}
+
+		#main-nav a:hover {
+			color: white;
+		}
+
+		#main-nav ul {
+
+			list-style: none;
+			padding-top: 20px;
+
+		}
+
+		#main-nav ul li {
+			display: inline-block;
+			position: relative;
+			width: 15%;
+			height: 40px;
+
+
+
+
+		}
+
+		.submenu {
+			height: 200px;
+			position: absolute;
+			display: block;
+			top: 30px;
+		}
+
+		#main-nav ul li .submenu {
+			display: none;
+			padding-left: 50px;
+			padding-top: 0;
+
+		}
+
+		#main-nav ul li:hover .submenu {
+			display: block;
+
+		}
+
+		#main-nav ul li .submenu li {
+
+			height: 20px;
+			width: 150px;
+			padding-top: 20px;
+			padding-left: 0px;
+			text-align: left;
+
+
+
+		}
+
+		#main-nav ul li .submenu li .submenu-2 {
+			margin-left: 40px;
+			margin-top: 0px;
+			display: none;
+		}
+
+		#main-nav ul li .submenu li:hover .submenu-2 {
+			margin-left: 40px;
+			margin-top: 0px;
+			display: block;
+		}
+
+		#main-nav ul li .submenu li .submenu-2 li {
+
+			padding-left: 30px;
+			padding-top: 10px;
+			padding-top: 20px;
+
+		}
+
+		.span {
+			font-size: 5px;
+		}
+
+	</style>
+
+
+</head>
+
+
+
+
+
+
+<body>
+
+
+	<nav id="main-nav">
+		<ul>
+			<li>
+				<a href="#">Home</a>
+			</li>
+			<li>
+				<a href="#">Services
+					<span class="arrow">&#x25BC;</span>
+				</a>
+				<ul class="submenu">
+					<li>
+						<a href="#">Android Dev</a>
+					</li>
+					<li>
+						<a href="#">iOS Dev</a>
+					</li>
+					<li>
+						<a href="#">Web Dev
+							<span height="2px" class="arrow">&#x25B6;</span>
+						</a>
+						<ul class="submenu-2">
+							<li>
+								<a href="#">Node.js</a>
+							</li>
+							<li>
+								<a href="#">PHP</a>
+							</li>
+							<li>
+								<a href="#">Python</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Downloads</a>
+			</li>
+			<li>
+				<a href="#">FAQs
+					<span class="arrow">&#x25BC;</span>
+				</a>
+				<ul class="submenu">
+					<li>
+						<a href="#">Android</a>
+					</li>
+					<li>
+						<a href="#">iOS</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">About</a>
+			</li>
+		</ul>
+	</nav>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
