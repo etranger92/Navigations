@@ -1,0 +1,302 @@
+<!doctype HTML>
+<html>
+
+<head>
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		nav ul {
+			list-style: none;
+		}
+
+		/*burger*/
+		#burger {
+			position: absolute;
+			right: 25px;
+			top: 30px;
+			height: 30px;
+			
+
+		}
+
+		#burger button{
+			background-color: white;
+			border-style: none;
+			display: flex;
+			flex-direction: column;
+			height: 3em;
+			animation-duration: 0s !important;
+		 
+			padding-left: 10px;
+			width: 5em;
+			
+
+
+		}
+
+		#burger span {
+			display: block;
+			width: 33px;
+			height: 4px;
+			margin-bottom: 5px;
+			z-index: 100;
+			background: #cdcdcd;
+			border-radius: 3px;
+			transition: 0.4s;
+			z-index: 1;
+
+		}
+
+		/*Burger cross*/
+		.change span:first-child {
+			-webkit-transform: rotate(-45deg) translate(-9, 6px);
+			transform: rotate(-45deg) translate(-9px, 6px);
+		}
+
+		.change span:nth-last-child(2) {
+			opacity: 0;
+		}
+
+		.change span:nth-child(3) {
+			-webkit-transform: rotate(45deg) translate(-8px, -8px);
+			transform: rotate(45deg) translate(-8px, -8px);
+		}
+
+		/**buttons**/
+		.mobile_menu_link {
+			width: 20em;
+			height: 7em;
+			display: flex;
+			justify-content: space-between;
+			animation-name: slider;
+			animation-duration: 0.5s;
+		}
+		/*button previous panel*/
+		.button_previous { 
+			background-color: whitesmoke;
+		    text-align: center;
+			text-transform: uppercase;
+			
+		}
+		.button_previous h1{
+			position: absolute ;
+			left:39%;
+			text-shadow: 0.5px 1px;
+			
+		}
+		
+		@keyframes slider {
+			from {
+				width: 0em;
+			}
+
+			to {
+				width: 20em;
+			}
+		}
+
+		/*All divs are off until each one is called by the class .open (bellow)**/
+		#sub-menu-men,
+		#sub-menu-top,
+		#sub-menu-brand,
+		#sub-menu-nike,
+		#mobile-menu-items
+
+		/*#test*/
+			{
+			display: none;
+		}
+
+		/*position-submenu**/
+		.open {
+			position: absolute;
+			text-align: left;
+			background-color: white;
+			display: block;
+			border:1px solid ghostewhite;
+			height: 35em;
+			left: 0px;
+			top: 0;
+			padding-left: 0px;
+			z-index: 4;
+			display: block !important;
+
+		}
+	
+
+	</style>
+</head>
+
+<body>
+
+	<div id="burger">
+		<button class="mobile_menu_link" value="burger">
+			<span> </span>
+			<span> </span>
+			<span> </span>
+		</button>
+	</div>
+
+	<nav id="mobile-nav">
+
+
+		<ul id="mobile-menu-items">
+			<li> <button class="mobile_menu_link" value="men"> Men <span> &#x276F </span> </button> </li>
+			<li> <button class="mobile_menu_link" value="women"> Women  </button> </li>
+			<li> <button class="mobile_menu_link" value="kids"> Kids  </button> </li>
+			<li> <button class="mobile_menu_link" value="sport"> Sport </button> </li>
+			<li> <button class="mobile_menu_link" value="brand"> Brand <span> &#x276F </span> </button>
+				<!-- <li> <button class="mobile_menu_link" value="test"> Test <span> &#x276F </span> </button> </li> -->
+
+		</ul>
+		<div id="sub-menu-men">
+			<ul class="sub_menu">
+				<button class="mobile_menu_link button_previous" value="previous"> <span> &#10094 </span>  <h1> Men </h1></button>
+				<li> <button class="mobile_menu_link" value="top"> Top <span> &#x276F </span> </button>
+				</li>
+				<li> <button class="mobile_menu_link" value="shirt"> Shirt </button> </li>
+			</ul>
+		</div>
+		<div id="sub-menu-top">
+			<ul class="sub_menu_items">
+				<button class="mobile_menu_link button_previous" value="previous"> <span> &#10094 </span> <h1>TOP  </h1> </button>
+				<li> <button class="mobile_menu_link"> <a src="#"> red </a> </button> </li>
+				<li> <button class="mobile_menu_link"> <a src="#"> blue </a> </button> </li>
+			</ul>
+		</div>
+		<div id="sub-menu-brand">
+			<ul class="sub_menu">
+				<button class="mobile_menu_link button_previous" value="previous"> <span> &#10094 </span> <h1> Brand </h1></button>
+				<li> <button class="mobile_menu_link" value="nike"> Nike <span> &#x276F </span></button>
+				</li>
+				<li> <button class="mobile_menu_link" value="Adidas"> Adidas  </button></li>
+				<li> <button class="mobile_menu_link" value="Rebook"> Rebook  </button> </li>
+				<li> <button class="mobile_menu_link" value="Lacoste"> Lacoste </button> </li>
+
+			</ul>
+		</div>
+		<div id="sub-menu-nike">
+			<ul class="sub_menu_items">
+				<button class="mobile_menu_link button_previous" value="previous"> <span> &#10094 </span> <h1> Nike  </h1></button>
+				<li><button class="mobile_menu_link"> <a src="#"> Short </a> </button> </li>
+				<li> <button class="mobile_menu_link"><a src="#"> Teeshirt </a> </button> </li>
+				<li> <button class="mobile_menu_link"><a src="#"> Pant </a> </button> </li>
+				<li> <button class="mobile_menu_link"> <a src="#"> Top </a> </button> </li>
+				<li> <button class="mobile_menu_link"> <a src="#"> Jacket </a> </button> </li>
+			</ul>
+		</div>
+		<!-- <div id="test">
+			<ul class="sub_menu_items">
+				<button class="mobile_menu_link" value="previous"> <span> &#10094 </span> test </button>
+				<li><button class="mobile_menu_link"> test <span> &#x276F </span> </button> </li>
+				<li> <button class="mobile_menu_link"> test <span> &#x276F </span> </button> </li>
+				<li> <button class="mobile_menu_link"> test <span> &#x276F </span> </button> </li>
+				<li> <button class="mobile_menu_link"> test <span> &#x276F </span> </button> </li>
+				<li> <button class="mobile_menu_link"> test <span> &#x276F </span> </button> </li>
+			</ul></div> -->
+
+	</nav>
+
+	<script>
+		/***Navigation Mobile (next and previous panels)***/
+
+		/* toggle burger*/
+		
+		(function() {
+			var mainNav = document.getElementById("mobile-nav")
+			var toggleMenu = document.getElementById("burger");
+			toggleMenu.addEventListener("click", closeMenu)
+
+			function closeMenu() {
+				toggleMenu.classList.toggle("change");
+				if (toggleMenu.className === "change") {
+					mainNav.style.display = "block";
+				} else {
+					mainNav.style.display = "none"
+				}
+			}
+		})();
+		// 1  We save all buttons and all divs (panels)
+		var menuGeneral = document.getElementById("mobile-menu-items");
+		var buttonsNext = document.getElementsByClassName("mobile_menu_link");
+		var subMenuMen = document.getElementById("sub-menu-men");
+		var subMenuMenTop = document.getElementById("sub-menu-top");
+		var subMenuBrand = document.getElementById("sub-menu-brand");
+		var subMenuBrandNike = document.getElementById("sub-menu-nike")
+		//var subMenuTest = document.getElementById("test");
+
+		//2  We loop 
+		for (var i = 0; buttonsNext.length > i; i++) {
+			if (buttonsNext[i]) {
+				buttonsNext[i].addEventListener("click", nextPanel)
+			}
+		}
+		/* Function to change the pannels:
+		   
+		   		- We spot from where the event has been fired e.target and we save his value e.target.value.
+		        - From the value attributed in the HTML, we will attribute the div chosen.  
+				- Button with value "previous" will take off the class "open" and put us back to the previous Panel.
+				
+				 For a new panel we will follow  then this process (you can uncomment "test" already created at each stages):  
+				
+					- Create new div with an id and insert it to the HTML section ( we add the same attributes used for the previous divs)
+					- In css, display default will be: none (line 68 css)
+					- In js, we save it in a var and we link it to the button chosen (Switch, case"your buttoN").
+					
+					! important: In the css section for the class .open, we need to adjust the "height" with a fix value adjusted to a size that covers all buttons of the first panel. Otherwise, we might see some elements from the panel 1 in the bottom of the panel 2 if we don't.			
+				*/
+
+		function nextPanel(e) {
+
+			var elementValue = e.target.value;
+			console.log(elementValue)
+			var elementParent = e.target.parentElement;
+			//For the case "previous", we need to target the parent of his parent to finally reach the div and remove the class.(hierachy).
+			var parentOfParent = elementParent.parentElement;
+
+			switch (elementValue) {
+				case "burger": 
+					menuGeneral.classList.add("open");
+					break;
+				case "men":
+					subMenuMen.classList.add("open");
+					break;
+				case "top":
+					subMenuMenTop.classList.add("open");
+					break;
+				case "brand":
+					subMenuBrand.classList.add("open");
+					break;
+				case "nike":
+					subMenuBrandNike.classList.add("open");
+					break;
+					/*	case "test":
+							subMenuTest.classList.add("open");
+							break; */
+
+				case "previous":
+					parentOfParent.classList.remove("open");
+					
+					
+
+			}
+
+		}
+
+
+
+		/*****************/
+
+	</script>
+</body>
+
+
+
+
+
+
+
+</html>
