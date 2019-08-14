@@ -1,0 +1,298 @@
+<!doctype HTML>
+<html>
+
+<head>
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+			box-sizing: border-box;
+		}
+
+		/****************************Header Above Navigation***************************/
+		#header-nav {
+			background-color: black;
+			color: white;
+			height: 70px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: relative;
+
+		}
+
+
+		/*************************************Burger**/
+		#burger {
+
+			align-content: center;
+			height: 100%;
+			width: 4em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-right: 0.5px solid white;
+			border-bottom: 1px solid white;
+		}
+
+		#burger span {
+			border-top: 4px solid white;
+			border-radius: 4px;
+			margin-bottom: 5px;
+			width: 33px;
+			align-items: center;
+		}
+
+		/****************************burgercross*/
+		.change span:first-child {
+		  -webkit-transform: rotate(-25deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+		}
+
+		.change span:nth-last-child(2) {
+			opacity: 0;
+		}
+
+		.change span:nth-child(3) {
+		  -webkit-transform: rotate(10deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+		}
+
+		
+		
+		/********************icone-header**/
+		#icone-header {
+			height: 3em;
+			width: 6em;
+			display: flex;
+			border-left: solid;
+			border-color: white;
+			height: 100%;
+			justify-content: space-around;
+
+		}
+
+		#icone-header span {
+			font-size: 2em;
+			width: 100%;
+			text-align: center;
+			padding-top: 13%;
+			border-right: 1px solid white;
+
+		}
+
+		/**************************search-bar**/
+		#search-bar {
+			height: 50px;
+			position: absolute;
+			background-color: white;
+			top: 100%;
+			width: 100%;
+			display: none;
+			opacity: 1;
+			color: black;
+
+
+		}
+		
+
+		/******************************************NAVIGATION**************************/
+		ul li {
+			list-style: none;
+		}
+
+		/*********************************Animation mobile**/
+		#nav-mobile {
+			display: none;
+			animation: slide;
+			animation-duration: 0.5s;
+		}
+
+		@keyframes slide {
+			from {
+				width: 0%;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		#nav-mobile a {
+			text-decoration: none;
+			color: black;
+
+		}
+
+		/*******************************outlook each buttons**/
+		.item_link {
+			background-color: white;
+			color: black;
+			border-top: 1px solid black;
+			text-align: left;
+			font-size: 3vw;
+		}
+		
+	
+
+		/******************************main-buttons first panel**/
+		.main_menu {
+			text-align: center;
+			background-color: black;
+			color: white;
+
+		}
+
+		/***************************sub-menu-men*/
+		#sub-menu-men,
+		#sub-menu-shoes {
+			display: none;
+		}
+
+		.sub_sub_menu {
+			padding-left: 5%;
+			width: 100%;
+		}
+
+		/***************************direction-menu */
+		.direction_menu {
+	
+			display: inline-block;
+			
+		}
+
+		/************************Class for the event*/
+		.open {
+			display: block !important;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<div id="main-header">
+
+		<div id="header-nav">
+			<div id="burger">
+				<span> </span>
+				<span> </span>
+				<span> </span>
+			</div>
+
+
+			<img href="#" id="logo-header" alt="adidas">
+
+			<div id="icone-header">
+				<span id="search"> &#128270 </span>
+				<span> B </span>
+			</div>
+			<input type="text" id="search-bar" placeholder="&#128270 search">
+		</div>
+
+
+		<nav id="nav-mobile">
+			<div id="menu-men">
+				<ul id="sub_menu_main">
+					<li class="item_link main_menu">  MEN  <span class="direction_menu"> &#11015 </span>
+
+						<ul id="sub-menu-men">
+							<li class="item_link"> SHOES <span class="direction_menu"> &#11015 </span>
+								<ul id="sub-menu-shoes" class="sub_sub_menu">
+									<li class="item_link"> <a href="#"> ALL MEN'S SHOES </a></li>
+									<li class="item_link"> <a href="#"> ORIGINALS </a></li>
+									<li class="item_link"> <a href="#"> FOOTBALL </a></li>
+									<li class="item_link"> <a href="#"> RUNNING </a></li>
+									<li class="item_link"> <a href="#"> GYM - TRAINING </a></li>
+									<li class="item_link"> <a href="#"> OUTDOOR </a></li>
+									<li class="item_link"> <a href="#"> ESSENTIALS </a></li>
+									<li class="item_link"> <a href="#"> SLIDERS AND FLIP-FLOPS </a></li>
+									<li class="item_link"> <a href="#"> BASKETBALL </a></li>
+
+								</ul>
+							</li>
+							<li class="item_link"> CLOTHING </li>
+							<li class="item_link"> ACCESSORIES</li>
+							<li class="item_link"> RELEASE DATES </li>
+							<li class="item_link"> TOP SELLERS </li>
+							<li class="item_link"> OUTLET </li>
+							<li class="item_link"> TRENDING </li>
+						</ul>
+
+					</li>
+					<li class="item_link main_menu">WOMEN</li>
+					<li class="item_link main_menu">KIDS</li>
+					<li class="item_link main_menu">COLLECTIONS</li>
+					<li class="item_link main_menu">SPORTS</li>
+					<li class="item_link main_menu">BRANDS</li>
+
+				</ul>
+
+			</div>
+
+		</nav>
+	</div>
+
+
+
+	<script>
+		var searchBar = document.getElementById("search-bar");
+		/** toggle Menu **/
+		(function() {
+			var burger = document.getElementById("burger");
+			var mainNavigation = document.getElementById("nav-mobile");
+			burger.addEventListener("click", toggleMenu);
+
+			function toggleMenu() {
+				mainNavigation.classList.toggle("open");
+				//We "on" the cross for the burger.
+				burger.classList.toggle("change");
+			//We remove the search bar If open
+				searchBar.classList.remove("open");
+			}
+		})();
+
+		/*************Open bar"search"**/
+		(function() {
+			var searchIcone = document.getElementById("search");
+			searchIcone.addEventListener("click", function() {
+				searchBar.classList.toggle("open");
+			});
+			
+		})();
+
+		/**************Open the next submenu if button clicked **/
+		
+		//We add a click event to each button of the main menu
+		var itemLink = document.getElementsByClassName("main_menu");
+		for (var i = 0; itemLink.length > i; i++) {
+			itemLink[i].addEventListener("click", openSubMenu);	
+			
+		}
+
+	     
+		function openSubMenu(event) {
+			var element = event.target;
+			console.log(element)
+			var subMenu = element.querySelector("ul");
+			console.log(subMenu, "submenu ul")
+			subMenu.classList.toggle("open");
+			
+			//We change the direction of the sign depending of the state of the menu.
+			var signOpenAndClose = element.querySelector("span");
+			var symboleSign = ["&#11014","&#11015"];
+		    signOpenAndClose.innerHTML = (subMenu.classList.contains("open" || "sub_sub_menu open" )) ? symboleSign[0] : symboleSign[1];
+			
+		}
+
+	</script>
+</body>
+
+
+
+
+
+
+
+</html>
